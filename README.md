@@ -30,7 +30,7 @@ This project replaces all of that with **one natural‑language policy** interpr
 
 ## Quick start
 
-**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365.
+**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Start with the [MS Scout — Getting Started (step‑by‑step) deck](https://microsofteur.sharepoint.com/:p:/r/teams/SCIGermany/Freigegebene%20Dokumente/FY27%20Security%20Squads/MS%20Scout%20-%20Getting%20Started_Step-by-Step_July%202026.pptx?d=w96f6a472ac3b4a659979c1ed10e7997e&csf=1&web=1&e=KfB0I7) *(Microsoft internal)*.
 
 1. Pick a review‑folder name (e.g. `#ToReview`).
 2. Paste the prompt in [`email-triage.prompt.md`](./email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
