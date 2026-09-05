@@ -7,6 +7,8 @@
 > - **Flags** what needs your personal reply, and **self‑clears** the moment you answer.
 > - **Free for Microsoft employees**, and unlike third‑party AI email tools, nothing leaves the tenant.
 
+**In a hurry?** Read the one‑page [Executive Summary](./docs/EXEC-SUMMARY.md). Ready to build it? Jump to [Quick start](#quick-start).
+
 ---
 
 ## Why this exists
@@ -138,4 +140,4 @@ See [`email-triage.prompt.md`](./email-triage.prompt.md) for the full, fill‑in
 
 ---
 
-*Built on Microsoft Scout + WorkIQ + Microsoft Graph. Contributions welcome — see the repo's `CONTRIBUTING.md`.*
+*Built on Microsoft Scout + WorkIQ + Microsoft Graph. Contributions welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md). Security policy: [`SECURITY.md`](./SECURITY.md).*
