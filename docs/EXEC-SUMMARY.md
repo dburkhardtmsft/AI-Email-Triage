@@ -41,3 +41,5 @@ Scout runs locally, so your laptop must be on with Scout running for the schedul
 ---
 
 *Full setup guide and technical details: see the [README](../README.md). Copy‑paste prompt: [`prompts/email-triage.prompt.md`](../prompts/email-triage.prompt.md).*
+
+*Questions, feedback, or feature enhancement requests? Contact **Dave Burkhardt** — [dburkhardt@microsoft.com](mailto:dburkhardt@microsoft.com).*

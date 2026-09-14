@@ -141,3 +141,5 @@ See [`email-triage.prompt.md`](./email-triage.prompt.md) for the full, fill‑in
 ---
 
 *Built on Microsoft Scout + WorkIQ + Microsoft Graph. Contributions welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md). Security policy: [`SECURITY.md`](./SECURITY.md).*
+
+*Questions, feedback, or feature enhancement requests? Contact **Dave Burkhardt** — [dburkhardt@microsoft.com](mailto:dburkhardt@microsoft.com).*
