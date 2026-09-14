@@ -74,3 +74,9 @@ Turn on my [#ToReview] triage automation.
 - **Filter/sort `#ToReview` by the "Needs Reply" category** to see what's waiting on you.
 - To dismiss something that doesn't need a reply, **remove the category** — no need to delete.
 - Replying is detected automatically; the item clears on the next run.
+
+---
+
+## Questions or feature requests?
+
+Have questions, feedback, or feature enhancement requests? Please feel free to reach out to **Dave Burkhardt** — [dburkhardt@microsoft.com](mailto:dburkhardt@microsoft.com). Contributions and forks are welcome.
