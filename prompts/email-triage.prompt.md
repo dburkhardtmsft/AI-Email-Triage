@@ -7,7 +7,8 @@ Paste this into Microsoft Scout. Fill in every `[bracketed]` field for your role
 ```
 # AI Email Triage — Master Prompt
 # Questions or feature requests? Contact Dave Burkhardt <dburkhardt@microsoft.com>
-# Source: https://github.com/dburkhardt_microsoft/AI-Email-Triage
+# Source: https://github.com/dburkhardtmsft/AI-Email-Triage
+# New to Scout? https://learn.microsoft.com/en-us/microsoft-scout/get-started
 
 Set up my AI-Powered email triage.
 
@@ -64,7 +65,7 @@ Tip: turn OFF conversation view in [#ToReview] so each message shows individuall
 # ---
 # Questions, feedback, or feature enhancement requests?
 # Contact Dave Burkhardt <dburkhardt@microsoft.com>
-# Source: https://github.com/dburkhardt_microsoft/AI-Email-Triage
+# Source: https://github.com/dburkhardtmsft/AI-Email-Triage
 ```
 
 ---
