@@ -37,6 +37,7 @@ This project replaces all of that with **one natural‑language policy** interpr
 3. Scout back‑tests the last 30 days into that folder and sets up a **paused** recurring automation.
 4. Review what landed; tune ("also keep anything from `[domain]`", "stop copying `[newsletter]`").
 5. Tell Scout to **turn the automation on** (hourly or a daily time).
+6. **Enable Scout's "Launch at system startup"** (Scout → Settings) so triage keeps running after reboots. **This is important:** managed Windows machines restart regularly (e.g. weekly Patch Tuesday updates), and if Scout doesn't auto‑launch, your scheduled triage silently stops until you reopen the app.
 
 That's it — no build, no deployment, no new license.
 
@@ -106,13 +107,13 @@ Approaches that add intelligence and/or run without your laptop, compared on the
 
 Genuine AI judgment with essentially zero setup, rules in your own words, and a safe **copy** into a review folder that never touches your inbox — all **in‑tenant**, on tooling Microsoft employees already have.
 
-**The one limitation:** Scout runs locally, so your laptop must be on (awake) with Scout running for the scheduled triage to fire. For fully unattended operation, a cloud option (Power Automate or a Logic App/Function) is the next step — subject to license and DLP clearance, and if the Graph copy connector is DLP‑blocked, Power Automate can only *move* mail out of your Inbox rather than copy it.
+**The one limitation:** Scout runs locally, so your laptop must be on (awake) with Scout running for the scheduled triage to fire. **Enable "Launch at system startup" (Scout → Settings)** so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates). For fully unattended operation, a cloud option (Power Automate or a Logic App/Function) is the next step — subject to license and DLP clearance, and if the Graph copy connector is DLP‑blocked, Power Automate can only *move* mail out of your Inbox rather than copy it.
 
 ---
 
 ## Limitations & sharp edges (read before adopting)
 
-- **Laptop must be on.** Local execution; if the machine is asleep/off past the scan window, that window is skipped.
+- **Laptop must be on.** Local execution; if the machine is asleep/off past the scan window, that window is skipped. **Enable Scout's "Launch at system startup"** (Scout → Settings) so triage resumes automatically after the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates) — otherwise a restart silently stops triage until you reopen Scout.
 - **Up to ~1 hour latency** on an hourly cadence before new mail appears / replied mail clears.
 - **Reply detection is conversation‑scoped.** A reply that breaks the thread (e.g., a heavily changed subject that starts a new conversation) could be missed by the auto‑clear.
 - **Folder enumeration caps.** Some Graph folder queries page‑cap around 250 items; large one‑time backfills should page by date window.

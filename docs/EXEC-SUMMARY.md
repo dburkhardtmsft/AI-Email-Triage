@@ -36,7 +36,7 @@ One natural‑language policy replaces dozens of brittle rules. The review folde
 
 ## The one trade‑off
 
-Scout runs locally, so your laptop must be on with Scout running for the scheduled triage to fire. Fully unattended operation means moving to a cloud option (Power Automate or a Logic App/Function) — subject to license, tenant DLP, and department budget.
+Scout runs locally, so your laptop must be on with Scout running for the scheduled triage to fire. Enable **"Launch at system startup"** (Scout → Settings) so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates). Fully unattended operation means moving to a cloud option (Power Automate or a Logic App/Function) — subject to license, tenant DLP, and department budget.
 
 ---
 
