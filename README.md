@@ -30,7 +30,7 @@ This project replaces all of that with **one natural‑language policy** interpr
 
 ## Quick start
 
-**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Microsoft employees: see the internal "MS Scout — Getting Started (step‑by‑step)" deck on the AzNet SharePoint.
+**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Start with [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn.
 
 1. Pick a review‑folder name (e.g. `#ToReview`).
 2. Paste the prompt in [`email-triage.prompt.md`](./email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
