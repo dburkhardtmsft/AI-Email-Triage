@@ -32,9 +32,9 @@ This project replaces all of that with **one natural‑language policy** interpr
 
 **Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Start with [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn.
 
-1. Pick a review‑folder name (e.g. `#ToReview`).
+1. Within Outlook, create a new folder under your Inbox (e.g. `#ToReview`).
 2. Paste the prompt in [`email-triage.prompt.md`](./email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
-3. Scout creates the folder, back‑tests the last 30 days into it, and sets up a **paused** recurring automation.
+3. Scout back‑tests the last 30 days into that folder and sets up a **paused** recurring automation.
 4. Review what landed; tune ("also keep anything from `[domain]`", "stop copying `[newsletter]`").
 5. Tell Scout to **turn the automation on** (hourly or a daily time).
 
