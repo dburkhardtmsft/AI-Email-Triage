@@ -33,7 +33,7 @@ This project replaces all of that with **one natural‑language policy** interpr
 **Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Start with [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn.
 
 1. Within Outlook, create a new folder under your Inbox (e.g. `#ToReview`).
-2. Paste the prompt in [`email-triage.prompt.md`](./email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
+2. Paste the prompt in [`prompts/email-triage.prompt.md`](./prompts/email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
 3. Scout back‑tests the last 30 days into that folder and sets up a **paused** recurring automation.
 4. Review what landed; tune ("also keep anything from `[domain]`", "stop copying `[newsletter]`").
 5. Tell Scout to **turn the automation on** (hourly or a daily time).
@@ -137,7 +137,7 @@ Genuine AI judgment with essentially zero setup, rules in your own words, and a 
 
 The prompt is a template. Swap in your own leadership chain, close collaborators, product/keywords, strategic customer domains, and any always‑keep/always‑skip specifics. Managers should add *"anything from my direct reports"* — one of the most common and most damaging things classic rules miss.
 
-See [`email-triage.prompt.md`](./email-triage.prompt.md) for the full, fill‑in‑the‑blanks prompt.
+See [`prompts/email-triage.prompt.md`](./prompts/email-triage.prompt.md) for the full, fill‑in‑the‑blanks prompt.
 
 ---
 
