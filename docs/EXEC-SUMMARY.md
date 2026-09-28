@@ -32,11 +32,12 @@ One natural‑language policy replaces dozens of brittle rules. The review folde
 | Power Automate + AI | Yes | Only via Graph connector (DLP‑gated) | Yes | Yes | Premium + AI capacity |
 | Azure Logic App / Function | Yes | Yes | Yes | Yes | Azure subscription |
 | M365 Copilot "Prioritize my inbox" | Yes | No (in‑place) | No | Partial | Copilot license |
+| Copilot Cowork (emerging) | Yes | Yes | Yes | Yes | Copilot license |
 | **Microsoft Scout (this project)** | **Yes** | **Yes** | **Yes** | **Yes** | **No extra license** |
 
 ## The one trade‑off
 
-Scout runs locally, so your laptop must be on with Scout running for the scheduled triage to fire. Enable **"Launch at system startup"** (Scout → Settings) so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates). Fully unattended operation means moving to a cloud option (Power Automate or a Logic App/Function) — subject to license, tenant DLP, and department budget.
+Scout runs locally, so your laptop must be on with Scout running for the scheduled triage to fire. Enable **"Launch at system startup"** and **"Prevent Sleep"** (Scout → Settings) so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates) and doesn't miss a run because the laptop dozed off. Fully unattended operation means graduating to a cloud runtime (Copilot Cowork, Power Automate, or a Logic App/Function) — subject to license, tenant DLP, and department budget. The reusable asset is the **triage policy + reconciliation design**; point it at whichever runtime your team standardizes on.
 
 ---
 

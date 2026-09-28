@@ -89,6 +89,29 @@ flowchart LR
 
 ---
 
+## The stack — how the pieces fit
+
+One triage loop, five layers:
+
+| Layer | Role |
+|---|---|
+| **LLM** — the judgment | Interprets your plain‑language keep/skip policy and decides, per message: *does this matter? does it need my reply?* |
+| **Microsoft Scout** — the agent & scheduler | The runtime that runs the loop on a schedule, orchestrates the steps, and calls the tools — locally, under your identity. |
+| **WorkIQ** — the intelligence layer | Sits on Graph and adds work context: **Data** (your mail/chats/meetings) · **Memory** (your style & key relationships) · **Inference** (what matters next). |
+| **Microsoft Graph** — the data layer | Securely reads/writes mail and folders and **enforces your permissions**. Provides the information; nothing leaves the tenant. |
+| **Outlook / Exchange Online** — the mailbox | Your inbox is the source of truth. Never moved or modified — the review folder is a *projection*, not a mutation. |
+
+### WorkIQ vs Microsoft Graph
+
+These are two different technologies, and the distinction matters:
+
+- **Microsoft Graph is the *data layer*.** It securely connects to your mail, files, meetings and chats across Microsoft 365 and enforces permissions. It **provides the information**.
+- **WorkIQ is the *intelligence layer* on top of Graph.** It interprets that data, builds a memory of how you work, and uses inference to predict what matters next. It **understands the context**.
+
+For this solution: **Graph** performs the secure copy/flag/delete on your mailbox, while **WorkIQ + the LLM** supply the judgment about which mail matters and what needs your reply. (WorkIQ framing per Microsoft's public description of the Microsoft 365 Copilot intelligence layer.)
+
+---
+
 ## Options considered
 
 Approaches that add intelligence and/or run without your laptop, compared on the axes that matter:
@@ -99,15 +122,18 @@ Approaches that add intelligence and/or run without your laptop, compared on the
 | Power Automate + AI Builder / Azure OpenAI | Yes (cloud flow) | Yes | Only via the Graph HTTP connector — may be DLP‑blocked; the allowed Outlook connector can only **move** | Yes (scheduled flow) | Yes | Premium + AI capacity; DLP can force a move that pulls mail out of your Inbox |
 | Azure Logic App / Function + Graph + Azure OpenAI | Yes (hosted in Azure) | Yes | Yes — full Graph `copyToFolder` | Yes | Yes | Azure subscription; most engineering + app registration |
 | Native M365 Copilot — "Prioritize my inbox" | Yes (cloud) | Yes — by your stated priorities | No — flags/summarizes in place, no folder routing | No | Partial — priority, not "awaiting your reply" | M365 Copilot license; not custom folder rules |
+| Copilot **Cowork** (emerging) | Yes (server‑side) | Yes | Yes — same Graph `copy` mechanics | Yes | Yes | M365 Copilot license; can run this same loop server‑side (no laptop) — see note below |
 | **Microsoft Scout (this project)** | **No — runs locally** | **Yes — your own words** | **Yes — copies; originals untouched** | **Yes** | **Yes** | **No extra license; needs your laptop on + Scout running** |
 
-> **Self‑clearing note:** auto‑removing mail you've replied to (and re‑surfacing new replies) needs a **stateful** automation — Scout, Power Automate, and a Logic App/Function can all do it; classic server‑side rules cannot, since they only act on arrival.
+> **Self‑clearing note:** auto‑removing mail you've replied to (and re‑surfacing new replies) needs a **stateful** automation — Scout, Power Automate, a Logic App/Function, and Cowork can all do it; classic server‑side rules cannot, since they only act on arrival.
+
+> **What about Cowork?** Copilot's Cowork is adding these same primitives (Graph `copy`, categories, per‑message reconciliation, scheduled runs) — that's validation, not competition. The reusable asset here is the **policy + reconciliation design**; point it at whichever runtime your team standardizes on. The trade‑off is Scout runs free on tooling you already have, while a Cowork/cloud runtime needs a Copilot (or Azure) license but removes the laptop dependency.
 
 ### Why Scout
 
-Genuine AI judgment with essentially zero setup, rules in your own words, and a safe **copy** into a review folder that never touches your inbox — all **in‑tenant**, on tooling Microsoft employees already have.
+Genuine AI judgment with essentially zero setup, rules in your own words, and a safe **copy** into a review folder that never touches your inbox — all **in‑tenant**, on tooling Microsoft employees already have. The single combination nothing else offers: **free *and* in‑tenant**.
 
-**The one limitation:** Scout runs locally, so your laptop must be on (awake) with Scout running for the scheduled triage to fire. **Enable "Launch at system startup" (Scout → Settings)** so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates). For fully unattended operation, a cloud option (Power Automate or a Logic App/Function) is the next step — subject to license and DLP clearance, and if the Graph copy connector is DLP‑blocked, Power Automate can only *move* mail out of your Inbox rather than copy it.
+**The one limitation:** Scout runs locally, so your laptop must be on (awake) with Scout running for the scheduled triage to fire. **Enable "Launch at system startup" and "Prevent Sleep" (Scout → Settings)** so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates) and doesn't miss a run because the laptop dozed off. For fully unattended operation, graduate to a cloud runtime (Cowork, Power Automate, or a Logic App/Function) — subject to license and DLP clearance, and if the Graph copy connector is DLP‑blocked, Power Automate can only *move* mail out of your Inbox rather than copy it.
 
 ---
 
