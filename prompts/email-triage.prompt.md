@@ -29,25 +29,38 @@ KEEP an email if it matches any of these (my standard list — include all of th
      addresses), AI/strategy discussions, leadership AMAs, org changes
   8. My team's newsletter: [name]
   9. Anything sent only to me (sole recipient) and work-related
+  10. APPROVALS / ACTIONS NEEDED: expense-report approvals, workflow approval
+     notifications (e.g. MSApprovals), purchase/PO/procurement/invoice/timecard/
+     access-request approvals, and any automated email asking me — or someone in my
+     leadership chain — for an approval, sign-off, or decision. Keep even from
+     no-reply notification addresses; these are actionable, not noise.
+  11. INCIDENT / LIVE-SITE for my area: incident, outage, on-call (and on-call
+     reminder), handoff, or RCA emails from my incident-management system (e.g. IcM)
+     that concern [my product/service] or name me in the notification/on-call chain.
+     Keep even from automated incident addresses.
   + Also always KEEP: ______________________________________________
     (a project codename, partner, customer exec, topic specific to you)
   + Also always SKIP (optional): specific senders, domains, or categories to auto-skip
     (e.g., certain newsletters, tools, distribution lists). Leave blank for defaults: ______
 
 SKIP routine noise: bulk marketing, automated replies, meeting accept/decline
-notifications, access/approval-bot and identity notifications, news and retail
-newsletters, and RSS digests. When something is borderline but could matter
-professionally, prefer to KEEP.
+notifications, generic identity/access-bot notifications, news and retail
+newsletters, and RSS digests. Exceptions (keep these even though they're automated):
+approval/expense/purchase requests (#10) and incident/on-call mail about my area
+(#11). When something is borderline but could matter professionally, prefer to KEEP.
 
 FLAG "Needs Reply": for each email you copy in, decide whether it needs my personal
 reply (a genuine question, request, approval/decision, or a person awaiting my
 response) and, if so, tag the copy with a "Needs Reply" category. An email counts as
 already replied only if I sent a response AFTER that specific message arrived (compare
 to Sent Items, per-message, scoped by conversation) — so follow-ups in old threads
-still surface.
+still surface. (Automated approval/expense and incident/on-call notifications are kept
+for visibility but are actioned in their own portal, not by an email reply — so don't
+tag those "Needs Reply".)
 
 When done, give me a digest grouped by reason (Leadership / Team / Customer-Field-Deal /
-Promotion / AI-Career / Newsletter / Personally addressed / Needs-Reply / Other).
+Promotion / AI-Career / Newsletter / Approvals-Actions / Incident-LiveSite /
+Personally addressed / Needs-Reply / Other).
 
 Finally, create a recurring automation that repeats this triage each [hour / morning at
 7:00 AM], but leave it TURNED OFF/paused until I review the 30-day results and tell you
