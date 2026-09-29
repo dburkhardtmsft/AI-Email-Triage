@@ -176,4 +176,4 @@ See [`prompts/email-triage.prompt.md`](./prompts/email-triage.prompt.md) for the
 
 *Built on Microsoft Scout + WorkIQ + Microsoft Graph. Contributions welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md). Security policy: [`SECURITY.md`](./SECURITY.md).*
 
-*Questions, feedback, or feature enhancement requests? Contact **Dave Burkhardt** — [dburkhardt@microsoft.com](mailto:dburkhardt@microsoft.com).*
+*Questions, feedback, or feature enhancement requests? [Open an issue](https://github.com/dburkhardtmsft/AI-Email-Triage/issues) on this repo.*

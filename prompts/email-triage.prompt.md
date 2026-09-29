@@ -6,7 +6,7 @@ Paste this into Microsoft Scout. Fill in every `[bracketed]` field for your role
 
 ```
 # AI Email Triage — Master Prompt
-# Questions or feature requests? Contact Dave Burkhardt <dburkhardt@microsoft.com>
+# Questions or feature requests? Open an issue: https://github.com/dburkhardtmsft/AI-Email-Triage/issues
 # Source: https://github.com/dburkhardtmsft/AI-Email-Triage
 # New to Scout? https://learn.microsoft.com/en-us/microsoft-scout/get-started
 
@@ -77,7 +77,7 @@ Tip: turn OFF conversation view in [#ToReview] so each message shows individuall
 
 # ---
 # Questions, feedback, or feature enhancement requests?
-# Contact Dave Burkhardt <dburkhardt@microsoft.com>
+# Open an issue: https://github.com/dburkhardtmsft/AI-Email-Triage/issues
 # Source: https://github.com/dburkhardtmsft/AI-Email-Triage
 ```
 
@@ -104,4 +104,4 @@ Then enable **Scout → Settings → "Launch at system startup"** and **"Prevent
 
 ## Questions or feature requests?
 
-Have questions, feedback, or feature enhancement requests? Please feel free to reach out to **Dave Burkhardt** — [dburkhardt@microsoft.com](mailto:dburkhardt@microsoft.com). Contributions and forks are welcome.
+Have questions, feedback, or feature enhancement requests? Please [open an issue](https://github.com/dburkhardtmsft/AI-Email-Triage/issues) on this repo. Contributions and forks are welcome.
