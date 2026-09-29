@@ -92,7 +92,7 @@ Turn on my [#ToReview] triage automation.
 (Optional: hourly vs. a specific daily time; keep Teams digests off.)
 ```
 
-Then enable **Scout → Settings → "Launch at system startup"** so triage keeps running after reboots. Managed Windows machines restart regularly (e.g. weekly Patch Tuesday updates); without auto‑launch, your scheduled triage silently stops until you reopen Scout.
+Then enable **Scout → Settings → "Launch at system startup"** and **"Prevent Sleep"** so triage keeps running after reboots and your laptop doesn't doze off mid‑run. Managed Windows machines restart regularly (e.g. weekly Patch Tuesday updates); without auto‑launch, your scheduled triage silently stops until you reopen Scout.
 
 ## Working the queue
 

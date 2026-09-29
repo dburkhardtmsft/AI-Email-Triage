@@ -30,14 +30,21 @@ This project replaces all of that with **one natural‑language policy** interpr
 
 ## Quick start
 
-**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365. New to Scout? Start with [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn.
+**Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365.
 
-1. Within Outlook, create a new folder under your Inbox (e.g. `#ToReview`).
-2. Paste the prompt in [`prompts/email-triage.prompt.md`](./prompts/email-triage.prompt.md) into Scout, filling in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.).
-3. Scout back‑tests the last 30 days into that folder and sets up a **paused** recurring automation.
-4. Review what landed; tune ("also keep anything from `[domain]`", "stop copying `[newsletter]`").
-5. Tell Scout to **turn the automation on** (hourly or a daily time).
-6. **Enable Scout's "Launch at system startup"** (Scout → Settings) so triage keeps running after reboots. **This is important:** managed Windows machines restart regularly (e.g. weekly Patch Tuesday updates), and if Scout doesn't auto‑launch, your scheduled triage silently stops until you reopen the app.
+1. **Install Scout & enable auto‑start.**
+   - Install Scout — see [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn. *(Microsoft employees: internal install at `aka.ms/m`.)*
+   - Set Scout Settings: **"Launch at system startup"** + **"Prevent Sleep"** — so triage survives reboots (e.g. weekly Patch Tuesday updates) and your laptop dozing off mid‑run.
+2. **Prepare Outlook.**
+   - In Outlook, add a folder under your Inbox (e.g. `#ToReview`).
+   - Turn **OFF** conversation view in that folder so each message shows individually.
+3. **Prepare the prompt for Scout.**
+   - Copy the prompt at [`prompts/email-triage.prompt.md`](./prompts/email-triage.prompt.md).
+   - Paste it into a new Scout chat window.
+   - Fill in the `[bracketed]` fields for your role (leadership chain, close collaborators, product, key customer domains, etc.), and run it.
+   - **Note:** the prompt is set to only copy your emails for the last 30 days, so you can fine‑tune the filter before turning on the recurring automation.
+4. **Review the results before running continuously.** If everything looks good in the review folder, tell Scout to run it hourly (or on a daily schedule).
+5. **Fine‑tune your AI rules engine.** Check the folder periodically; tell Scout to adjust what it flags for review/action.
 
 That's it — no build, no deployment, no new license.
 
