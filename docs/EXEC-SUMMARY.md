@@ -20,7 +20,7 @@ One natural‑language policy replaces dozens of brittle rules. The review folde
 
 ## Why it matters
 
-- **Free for Microsoft employees** — it runs on tooling we're already provisioned (Microsoft Scout + WorkIQ + Microsoft Graph). Setup is essentially one prompt.
+- **Free** — it runs on tooling you likely already have provisioned (Microsoft Scout + WorkIQ + Microsoft Graph). Setup is essentially one prompt.
 - **In‑tenant by design** — unlike third‑party AI email tools, no mailbox content leaves the tenant, so there's no data‑governance exposure.
 - **Scales to any role** — the same pattern serves any IC or manager. Managers can add *"anything from my direct reports,"* one of the most damaging things classic rules miss.
 

@@ -5,7 +5,7 @@
 > **TL;DR** — One prompt turns Scout into an AI chief‑of‑staff for your inbox.
 > - **Copies** only what matters into a review folder — your Inbox is never touched.
 > - **Flags** what needs your personal reply, and **self‑clears** the moment you answer.
-> - **Free for Microsoft employees**, and unlike third‑party AI email tools, nothing leaves the tenant.
+> - **Free**, and unlike third‑party AI email tools, nothing leaves your Microsoft 365 tenant.
 
 **In a hurry?** Read the one‑page [Executive Summary](./docs/EXEC-SUMMARY.md). Ready to build it? Jump to [Quick start](#quick-start).
 
@@ -33,7 +33,7 @@ This project replaces all of that with **one natural‑language policy** interpr
 **Prerequisite:** Microsoft Scout with WorkIQ enabled and signed in to Microsoft 365.
 
 1. **Install Scout & enable auto‑start.**
-   - Install Scout — see [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn. *(Microsoft employees: internal install at `aka.ms/m`.)*
+   - Install Scout — see [Get started with Microsoft Scout](https://learn.microsoft.com/en-us/microsoft-scout/get-started) on Microsoft Learn.
    - Set Scout Settings: **"Launch at system startup"** + **"Prevent Sleep"** — so triage survives reboots (e.g. weekly Patch Tuesday updates) and your laptop dozing off mid‑run.
 2. **Prepare Outlook.**
    - In Outlook, add a folder under your Inbox (e.g. `#ToReview`).
@@ -138,7 +138,7 @@ Approaches that add intelligence and/or run without your laptop, compared on the
 
 ### Why Scout
 
-Genuine AI judgment with essentially zero setup, rules in your own words, and a safe **copy** into a review folder that never touches your inbox — all **in‑tenant**, on tooling Microsoft employees already have. The single combination nothing else offers: **free *and* in‑tenant**.
+Genuine AI judgment with essentially zero setup, rules in your own words, and a safe **copy** into a review folder that never touches your inbox — all **in‑tenant**, on tooling you likely already have. The single combination nothing else offers: **free *and* in‑tenant**.
 
 **The one limitation:** Scout runs locally, so your laptop must be on (awake) with Scout running for the scheduled triage to fire. **Enable "Launch at system startup" and "Prevent Sleep" (Scout → Settings)** so it survives the regular reboots managed Windows machines get (e.g. weekly Patch Tuesday updates) and doesn't miss a run because the laptop dozed off. For fully unattended operation, graduate to a cloud runtime (Cowork, Power Automate, or a Logic App/Function) — subject to license and DLP clearance, and if the Graph copy connector is DLP‑blocked, Power Automate can only *move* mail out of your Inbox rather than copy it.
 
