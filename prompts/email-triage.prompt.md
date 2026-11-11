@@ -58,6 +58,16 @@ KEEP an email if it matches any of these (my standard list — include all of th
      unfamiliar. This exists specifically to catch important first-time senders (e.g.
      legal counsel reaching out directly about a matter naming you) that no static list
      would ever anticipate.
+  14. PERSONAL ADMIN ACTION REQUIRED (even from automated/no-reply addresses): a workflow
+     email addressed only to me (sole recipient) requiring MY personal action within a
+     stated deadline/expiration window, with a real consequence if ignored — e.g. device/
+     equipment refresh elections, benefits enrollment deadlines, facilities/badge actions,
+     or similar one-time personal elections. Do NOT lump these in with routine automated
+     noise just because the sender address looks like a bot/no-reply/service alias — the
+     distinguishing signal is "sole recipient + personal action + expiring deadline +
+     real consequence," not the sender's domain. This is distinct from recurring
+     compliance/training reminders (which stay SKIP) and from the APPROVALS rule above
+     (which is for formal approval-workflow requests, not personal elections).
   + Also always KEEP: ______________________________________________
     (a project codename, partner, customer exec, topic specific to you)
   + Also always SKIP (optional): specific senders, domains, or categories to auto-skip
